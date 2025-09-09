@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from typing import Optional
 
-app=FastAPI()
+
 
 items=[
     {"id":1,"name":"Pen","cate":"Stationary","price":20},
