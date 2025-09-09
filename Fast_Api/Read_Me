@@ -8,7 +8,7 @@ pip install -r requirements.
 
 
 Start the server:
-python -m uvicorn main:app --reload
+python -m uvicorn main:app --reload txt 
 
 
 Open your browser at http://127.0.0.1:8000
