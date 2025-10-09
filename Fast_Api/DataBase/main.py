@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from pydantic import BaseModel
 
-DATABASE_URL = "mysql+pymysql://root:Manish%40123@127.0.0.1:3306/university_db"
+DATABASE_URL = "mysql+pymysql://root:Manish%40123@127.0.0.1:3306/university"
 
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
