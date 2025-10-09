@@ -12,6 +12,9 @@ def root_url():
 users ={
     "1":{"name":"Manish"},
     "2":{"name":"Harish Gandu"}
+    "3":{"name":"Harasha"}
+
+    
 }
 
 @app.get("/user/{user_id}")
