@@ -13,4 +13,3 @@ python -m uvicorn main:app --reload
 
 Open your browser at http://127.0.0.1:8000
 
-You should see a welcome message from FastAPI.
