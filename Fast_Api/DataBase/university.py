@@ -7,7 +7,7 @@ from datetime import date
 import enum
 
 #  MySQL Connection
-DATABASE_URL = "mysql+pymysql://root:Manish%40123@127.0.0.1:3306/university"
+DATABASE_URL = "mysql+pymysql://root:Manish@123@127.0.0.1:3306/university"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
