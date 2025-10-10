@@ -1,0 +1,16 @@
+Introduction to FastAPI
+
+This example demonstrates a minimal FastAPI app.
+
+How to run
+Install dependencies:
+pip install -r requirements.
+
+
+Start the server:
+python -m uvicorn main:app --reload txt 
+
+
+Open your browser at http://127.0.0.1:8000
+
+You should see a welcome message from FastAPI.
