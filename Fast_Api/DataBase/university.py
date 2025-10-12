@@ -18,7 +18,7 @@ class StatusEnum(str, enum.Enum):
     inactive = "inactive"
     alumni = "alumni"
 
-#  SQLAlchemy model — matches EXACT 
+#  SQLAlchemy model — matches 
 class Student(Base):
     __tablename__ = "student"
     stu_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
