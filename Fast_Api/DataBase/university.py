@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from datetime import date
 import enum
 
-#  MySQL Connection
+#  MySQL Connection using passwoed 
 DATABASE_URL = "mysql+pymysql://root:Manish@123@127.0.0.1:3306/university"
 
 engine = create_engine(DATABASE_URL)
