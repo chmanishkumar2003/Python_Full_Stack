@@ -31,7 +31,7 @@ class Student(Base):
     status = Column(Enum(StatusEnum), nullable=False, default=StatusEnum.active)
 
 
-#  Pydantic schema for requests
+#  Pydantic schema for requests of students
 class StudentCreate(BaseModel):
     First_name: str
     Last_name: str
