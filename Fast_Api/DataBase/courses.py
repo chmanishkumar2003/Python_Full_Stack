@@ -21,7 +21,7 @@ class Courses(Base):
 
 Base.metadata.create_all(bind=engine)
 
-# ---------- Pydantic Model ----------
+# Pydantic Model
 class CourseCreate(BaseModel):
     cur_id: int 
     cur_name: str
@@ -54,5 +54,6 @@ def get_courses():
     courses = db.query(Courses).all()
     db.close()
     return courses
+
 
 
