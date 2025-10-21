@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from fastapi import HTTPException
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -40,3 +41,4 @@ def read_users():
     users = db.query(User).all()
     db.close()
     return [{"id": u.id, "name": u.name, "email": u.email} for u in users]
+
