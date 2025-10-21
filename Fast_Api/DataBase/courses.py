@@ -17,7 +17,7 @@ class Courses(Base):
     cur_id = Column(Integer, primary_key=True, autoincrement=True)
     cur_name = Column(String(100), nullable=False)
     credits = Column(Integer, nullable=False)
-    dep_id = Column(Integer)  # Can be null (no foreign key enforced)
+    dep_id = Column(Integer)  # Can be null 
 
 Base.metadata.create_all(bind=engine)
 
@@ -54,4 +54,5 @@ def get_courses():
     courses = db.query(Courses).all()
     db.close()
     return courses
+
 
