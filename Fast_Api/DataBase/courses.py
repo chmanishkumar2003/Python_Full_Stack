@@ -10,7 +10,7 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 Base = declarative_base()
 
-# ---------- Courses Table ----------
+# Courses Table
 class Courses(Base):
     __tablename__ = "courses"
 
@@ -54,3 +54,4 @@ def get_courses():
     courses = db.query(Courses).all()
     db.close()
     return courses
+
