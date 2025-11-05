@@ -1,0 +1,44 @@
+🔹 Data Handling & Error Management
+1. Explain **try, except, finally, else** in Python.
+The try, except, finally, else are used for exceptional handling in python for to handle runtime errors effectively.
+Try: Contains block of code that might raise an exception.
+Except: They are used to catch and handle exception.
+Else: Executes only when code is correct or no error.
+Finally: Executes when code contains error or no error. 
+Example:
+try:
+	n=int (input (“Enter no.”))
+	res=10/n
+except ZeroDivisionError:
+	print (“U can’t divide with 0”)
+except ValueError:
+	print (“U can’t divide with -ve no.”)
+else:
+	print (“The result =”, res)
+finally:
+	print (“Code Executed”)
+	
+2. What are **custom exceptions**? How do you create one?
+Custom exceptions:
+->Custom exceptions allow you to define own error types for specific con in your program.
+->You can create them by using subclassing the built-in Exception Class.
+Example:
+class NegativeError(Exception):
+    pass
+
+def pos(n):
+    if n < 0:
+        raise NegativeError("Negative no. are not allowed")
+    else:
+        print("Number is positive")
+
+try:
+    pos(-5)
+except NegativeError as e:
+    print ("Error :",e)
+
+3)What are with Statement & Context Managers?
+->The with statement in python is used for simplification of resource management like network connections, files.
+->It ensures automatic cleanup even if an error occurs.
+With open
+
