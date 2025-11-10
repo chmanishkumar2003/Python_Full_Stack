@@ -1,3 +1,5 @@
+const button = document.getElementById("b1");
+const ageInput = document.getElementById("i1");
 button.onclick = function() {
     const age = Number(ageInput.value);
     if (age >= 18) {
