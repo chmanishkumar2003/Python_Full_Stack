@@ -17,3 +17,5 @@ for(i=fruits.length;i>=0;i--){
 for(i=fruits.length-1;i>=0;i--){
   console.log(fruits[i]);
 }//Its prints all fruits without undefined value.
+fruits.sort().reverse();
+console.log(fruits);
