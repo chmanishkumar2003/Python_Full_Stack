@@ -4,3 +4,4 @@ function birthday(user,age){
   console.log(`You are ${age} years old now`);
 }
 birthday("Harish",22);
+// Here "harish" is the value passed to the function as user parameter.
