@@ -1,0 +1,56 @@
+body{
+    background-color: rgba(238, 238, 221, 0.811);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+#h1{
+    font-size: 2em;
+    color: rgb(87, 9, 234);
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
+    background-color: white;
+}
+#dis{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(244, 19, 19);
+    text-shadow:2px 2px 2px rgb(60, 58, 58);
+}
+#controls button {
+    font-size: 2rem;
+    padding: 20px 40px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transition:background-color 0.5s ease;
+}
+#stBtn{
+    background-color: rgb(71, 244, 71);
+}
+#stBtn:hover{
+    background-color: rgb(7, 171, 7);
+}
+#spBtn{
+    background-color: rgb(247, 60, 60);
+}
+#spBtn:hover{
+    background-color: rgb(186, 10, 10);
+}
+#reBtn{
+    background-color: cornflowerblue;
+}
+#reBtn:hover{
+    background-color: rgb(29, 100, 233);
+}
