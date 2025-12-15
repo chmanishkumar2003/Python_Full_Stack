@@ -4,7 +4,7 @@ let long=words.filter(longer);
 
 console.log(short);
 console.log(long);
-
+//For shorter item
 function shorter(item){
     return item.length <= 5;
 }
