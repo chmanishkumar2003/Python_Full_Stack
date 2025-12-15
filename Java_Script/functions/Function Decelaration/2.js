@@ -9,6 +9,6 @@ const even=num.filter(function (items){
 const odd=num.filter(function (items){
     return items % 2 !== 0;
 });
-console.log("The squares are "+ sq);
-console.log("The evens are "+ even);
+console.log("The squares are "+ sq);//For squares
+console.log("The evens are "+ even);//For evens
 console.log("The odd are "+ odd);
