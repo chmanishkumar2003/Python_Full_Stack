@@ -7,7 +7,7 @@ console.log(evenNum);
 function even(item){
     return item % 2 ===0;
 }
-
+//Function for odd
 function odd(item){
     return item % 2!==0;
 }
