@@ -15,5 +15,5 @@ count.inc();
 count.inc();
 count.inc();
 count.inc();
-
+//Count increases
 console.log(`The current count is ${count.get()}`);
