@@ -10,6 +10,7 @@ function sum(call,x,y){
     let res=x+y;
     call(res);
 }
+//Call back sum function
 function display(res){
     document.getElementById("h1").textContent=res;
 }
