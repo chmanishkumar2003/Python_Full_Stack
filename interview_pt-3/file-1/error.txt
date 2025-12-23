@@ -5,7 +5,7 @@ Try: Contains block of code that might raise an exception.
 Except: They are used to catch and handle exception.
 Else: Executes only when code is correct or no error.
 Finally: Executes when code contains error or no error. 
-Example:
+Ex:
 try:
 	n=int (input (“Enter no.”))
 	res=10/n
