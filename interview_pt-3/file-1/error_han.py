@@ -1,3 +1,4 @@
+#Exception Handling
 try:
 	n=int (input (“Enter no.”))
 	res=10/n
