@@ -1,3 +1,4 @@
+#Without Using length function(i.e str)
 n=1531
 temp=n
 count=0
