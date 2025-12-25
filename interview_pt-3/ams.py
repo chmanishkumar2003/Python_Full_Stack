@@ -4,6 +4,7 @@ temp=n
 count=0
 sum=0
 org=n
+#while loop instead of str function
 while n > 0:
     count+=1
     n=n//10
