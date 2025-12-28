@@ -15,6 +15,7 @@ button{
     background-color:rgba(0, 229, 255, 0.767);
     color:white;
     font-weight:bold;
+    /*Cursor pointer is used to point the cursor for animation  */
     cursor:pointer;
 }
 body{
