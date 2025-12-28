@@ -2,7 +2,7 @@ function roll() {
     const num = document.getElementById("i1").value;
     const res = document.getElementById("res");
     const img = document.getElementById("img");
-
+// Const elements cant be changed
     const val = [];
     const image = [];
 
