@@ -1,5 +1,5 @@
 def anagram(st_1,st_2):
-    
+    #Length of two strings are equal so they are anagram 
     if len(st_1)!=len(st_2):
         print("Not Ana")
     else :
