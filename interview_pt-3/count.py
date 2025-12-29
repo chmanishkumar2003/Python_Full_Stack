@@ -1,3 +1,4 @@
+# Counting the no. of element. 
 n=[1,2,3,3,3,4]
 for i in n:
     count=0
