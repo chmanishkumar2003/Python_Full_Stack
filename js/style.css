@@ -1,0 +1,62 @@
+#container{
+    display:flex;
+    justify-content: center;
+    font-family:Arial,san-serif;
+    text-align:center;
+    align-items: center;
+    font-size:2rem;
+    height: 100vh;
+    font-weight:bold;
+}
+body{
+    /* background-image:url(dice/bg_clock.jpg); */
+    background-color: rgb(243, 243, 79);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover ;
+    background-attachment: fixed;
+    margin:0;
+}
+#clock{
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(250, 40, 40);
+    backdrop-filter: blur(10px);
+  /* background-color: rgb(243, 209, 117); */
+}
+
+h1{
+    color:red;
+}
+button{
+    font-size:1.5rem;
+    padding:10px 15px;
+    border-radius:10px;
+    border:none;
+    background-color:rgba(0, 229, 255, 0.767);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:rgba(3, 102, 168, 0.767);
+}
+button:active{
+    background-color:rgba(1, 67, 110, 0.767);
+}
+input{
+    font-size:1.5rem;
+    text-align:center;
+    width:200px;
+    font-weight:bold;
+}
+res{
+    margin:20px;
+}
+img{
+    width:150px;
+    margin: 5px;
+}

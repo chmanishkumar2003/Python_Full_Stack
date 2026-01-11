@@ -1,0 +1,502 @@
+
+1) What are Python’s key features? Why is it called an interpreted language?
+
+->python's key features include it is a high-level language, interpreted, dynamic, and it supports multiple programming paradigms like oops and it is open source free for all.
+->It is easy to understand.
+->It developes API's fast using FastAPI.
+->it is considered as an interpreted language because it executes line by line code.
+
+2) Difference between *Python 2 and Python 3*?
+
+->print statements are different
+eg: In python 2 the print statement is print"Hello"
+    In python 3 the print statement is print("Hello")
+->Integer Division
+eg: in python 2 when we divide 7/2 yield, the answer is 3
+    in python 3 when we divide 7/2 yield, the answer is 3.5
+
+3) Explain indentation in Python. What happens if indentation is incorrect?
+
+-> In python, the indentation is crucial as it defines the structure and scope of code blocks. python consists tabs or spaces at the beginning of a line to indicate code hierachy. it comes after for, if, else, while, class, def...
+-> if we indicate incorrect the indentation error will occur, the flow of structure program is disturbed.
+
+4) What are Python **keywords**? Can you use them as variable names?
+
+-> python keywords are reserved words that have predefined meanings. it is like for, while, import, class, True, False, None, if, else.
+-> We cannot use as variable names because if we use those it will give syntax error.
+
+5)  Difference between **list, tuple, set, and dictionary**. Give examples.
+
+->List: Mutable- which we can modify after creation and ordered(maintains in an order of elements).square brackets[]
+eg:lst=[1,2,"apple",2,True]
+   lst.append(3)
+   print(lst[0])
+
+->Tuple: Immutable-which cannot modify after creation and it is ordered (maintains in an order of elements).parenthesis()
+eg:tup=(1,2,"banana",2,False)
+   tup.append(3) #cannot be added because it is immutable and it would raise error
+   print(tup[2])
+
+->Set: Mutable-which can modify after creation and it unordered(does not main any order of elements).braces{} and parenthesis()
+eg: set={1,2,"orange",2,True} #here 2 is ignored because it is duplicate
+    set.add(4)
+    print(set)
+    
+->Dictionary: Mutable-which can modify after creation and it is ordered in python 3.7+, unordered in older versions. Braces{}
+eg: dict = {"name":"Harish","age":21,"id":24}
+    dict["job"]="engineer"
+   print(dict["name"])
+
+6) What is the difference between **mutable and immutable** data types?
+
+-> Mutable data types: These data types whose values can be modified after creation.
+   when you modify a mutable object, you are changing the original object in memory.
+eg: list, Set, Dictionary
+-> Immutable data types: these data types whose values cannot be modified after creation.
+   if we want to modify the values we need to create a new object, the original object is unchanged
+eg: integer, string, float, tuples
+
+7)Explain **== vs is** operator in Python with examples.
+
+-> In python, == and IS are comparison operators used to evaluate relationships between objects, but they serve different purposes.
+-> ==(Equality operator):Compares the values of two objects. returns True if the values of the objects are equal, otherwise False.
+eg: a=[1,2,3]
+    b=[1,2,3]
+    c=[4,5,6]
+print(a==b) #it prints True
+print(a==c) #it prints False
+->IS(identity operator): compares the identity of two objects. returns True if two variables refer to the exact  same object in memory,
+                         otherwise False
+eg:a=[1,2,3]
+   b=[1,2,3]
+   c=a
+print(a is b)   #it prints False because the objects are different
+print(a is c)  # it prints True because both refer to the same objects
+->eg2:a=100
+    b=100 
+print(a is b) #it prints True because same cached object
+->   a=500
+   b=500
+print(a is b) #it prints False because the caches integers from -5 to 256, so it will works True only in that range
+
+8) What is the difference between **append() vs extend()** in lists?
+
+-> The append() and Extend() methods in python lists both add elements to a list, but they differ in how they handle
+   the elements being added.
+eg: Append(): when we use append() we can only add single element to the end of the list
+    lst = [1,2,3]
+    lst.append(4)  
+    print(lst)   #prints [1,2,3,4]
+    lst.append([5,6]) #when we add multiple items weather that item is a simple value or collection itself.
+    print(lst)   # prints [1,2,3,4,[5,6]]
+eg: Extend(): Adds multiple elements from an iterable(like another list, tuple, set, or string) to the end of the list
+    lst=[1,2,3]
+    lst.extend([4,5])
+    print(lst)  #prints [1,2,3,4,5]
+    lst.append("abc")  #when we want to add all individuals  items  from an iterable  to the existing list, effectively merging it.
+    print(lst)  #it prints [1,2,3,4,5,'a','b','c']  
+
+9)Explain **shallow copy vs deep copy** in Python.
+
+->In python, shallow copy and deep copy are two distinct methods for creating copies of objects, particularly when dealing with mutable data structures and nested objects
+ ->Shallow copy: we can create an object reference of original object data and when we modify the reference object data the original will also changes the data like reference object data.
+eg:import copy
+   original=[[1,2],[3,4]]
+   shallow_copy=copy.copy(original)
+   shallow_copy[1][1]=99
+   print(original)      #it prints [[1,2],[3,99]] here original also changed
+   print(shallow_copy)   #it prints [[1,2],[3,99]] here is the reference which is directly changed.
+ ->deep copy: we can create an object with the reference of original object data, when if we change or modify the 
+   reference object data the original will not change, unlike shallow copy
+eg: import copy 
+    original=[[1,2],[3,4]]
+    deep_copy=copy.deepcopy(original)
+    deep_copy[0][1]=100
+    print(original)   #it prints [[1,2],[3,4]] here cannot changed the data in deep copy unlike shallow copy
+    print(deep_copy)  # it prints [[1,100],[3,4]] here the reference object of data changed directly.
+
+10) How does python handles memory management(garbage collection)?
+
+-> Python automatically manages memory. Python memory management is largely automatic, combining the immediate deallocation of reference counting with the more comprehensive. It uses a combination of:
+   ->reference counting 
+   ->Garbage collection for cyclic references 
+   ->Private heap and memory management  
+
+
+
+                                    *******************Intermediate ANS *******************************
+
+
+
+
+1)What are *functions* in Python? Difference between \*args and \*\*kwargs?
+-> A function is a block of reusable code that performs a specific code.
+-> when we want to rewrite the whole code you can define it with a function after you can call it if needed. 
+ No need to rewrite the whole code, just call the function it will be executed.
+eg: def function_name():
+    	add=20+30
+ 	return add 
+    print(function_name())
+-> functions helps in reusability, readability, and modularity.
+Difference between args and kwargs: Both are used in function definitions when you don't know in advance how many arguments or parameters will be passed.
+->*args:(Arbitrary Positional Arguments)
+  -it collects extra positional arguments as tuple, use it when you want to pass a variable number of arguments.
+eg: def add_numbers(*args):
+    	return sum(args)
+    print(add_numbers(1,2,3)) #it prints 6
+->**kwargs:(Arbitrary keyword argument)
+  -it collects extra keyword arguments as dictionary, use when you want to handle arguments that you dont know
+    in advance
+eg: def print_details(**kwargs):
+    	for key, value in kwargs.items():
+		print(f"{key}:{value}")
+    print(print_details(name="harish",age=21))
+
+2)Explain **decorators** in Python with an example.
+->A decorator is a function ,it uses another function as input, adds some functionality to it, and returns a new function called wrapper, it is used in extra code without modifying or changing the original source code.
+->wrap: it is a function used for extra behaviour.
+->the decorators are used mainly for add logging, to check authentication, to measure execution time, to modify or 
+  extend function behaviour without rewriting it
+eg1:def my_decorator(fun):
+    def wrapper():
+        print("before the function runs")
+        fun()
+        print("After the function run")
+    return wrapper
+@my_decorator   #this is the decorator to hello()
+def hello():
+    print("Helo world!")
+hello() 
+
+eg2:#decorator with argument
+def smart_division(fun):
+    def wrapper(a,b):
+        print(f'Division {a} by {b}')
+        if b==0:
+            return "Error!, Division by zero"
+        return fun(a,b)
+    return wrapper
+@smart_division
+def division(a,b):
+    return a/b
+print(division(5,0))
+print(division(10,5))
+
+3)What are generators and yield?
+->A generator is a special type function that allows you to create an iterator(something you can loop over)
+  in a simple and memory efficient way.
+->Instead of returning of all values at once(like a list), a generator yield values at a time, only when needed.
+->Yield: Yield is like return or print, but it pause the function instead of end the function.
+  When the function is called again, it resumes where it left off.
+eg: def my_generator():
+	yield 1
+	yield 2
+	yield 3
+
+   gen= my_generator()
+   
+print(next(gen))  #1
+print(next(gen))   #2
+print(next(gen))    #3
+
+if you print again it will raise StopIteration
+eg2: def countdown(n):
+	while n>0:                    #output
+   	   yield n                     5
+	   n=n-1			4
+     for num in countdown(5):		3
+	print(num)                      2
+					1
+4)Difference between iterable, iterator, and generator?
+->Iterable: An iterable is a pyhtonn object we can loop over with using for loop.
+  It implements the iter method
+eg: text="python"	
+    for char in text:	
+	print(char)     #here string Python is an iterable, because we can loop over it.
+->Iterator: We can turn an iterable to iterator using iter() method.
+            By this we can fetch items one by one using next()
+eg:numbers[1,2,3]      #here numbers are iterable
+  item=iter(numbers)   #here item is an iterator
+  print(next(item))  #1
+  print(next(item))  #2
+  print(next(item))  #3
+  print(next(item))  #it will show Stopiteration 
+->Generator: It is function created with yield and generators are iterators
+   eg:def countdowm(n):
+         while n>0:
+           yield n
+           n=n-1
+      for num in countdown(5):
+     	print(num)           #it will print reverse order in numbers like 5,4,3,2,1
+
+5)Explain **list comprehension** with an example.?
+->List comprehension is a way of writing code in short and elegant to create lists in python.
+  Instead of writing a for loop and appending values, we can write it in one line.
+
+ eg: without list comprehension         with list comprehension
+        num=[]					num=[i*i for i in range(5)]
+        for i in range(5):			print(num)
+	    num.append(i*i)
+        print(num)                       output: [0,1,4,9,16]
+
+6) What is the difference between **classmethod, staticmethod, and instance method**?
+->Instance method
+  An instance method is a function defined in a class that operates on a instance object  of the class.
+  It takes self as the first parameter, which represents the object itself.
+eg: class Student:
+    def __init__(self, name, marks):
+        self.name = name       # instance variable
+        self.marks = marks     # instance variable
+    # Instance method
+    def display_info(self):
+        print(f"Name: {self.name}, Marks: {self.marks}")
+# Creating objects (instances)
+s1 = Student("Harish", 90)
+s2 = Student("Anu", 85)
+# Calling instance methods
+s1.display_info()   # Output: Name: Harish, Marks: 90
+s2.display_info()   # Output: Name: Anu, Marks: 85
+
+->static method: Static method does not depends on the self and class itself. in decorators we use @staticmethod
+eg: class Validator:
+    @staticmethod
+    def is_even(num):
+        return num % 2 == 0
+
+print(Validator.is_even(10))  # True
+print(Validator.is_even(7))   # False
+
+->A class method is a method that works on the class itself, not on the self(instances).
+  It takes cls(class) as the first parameter instead of self(instance) and we should use in decorators as
+    @classmethod
+eg: class Student:
+        school="Gitam University"
+        @classmethod
+        def get_school(cls):
+            return cls.school
+--->Example all three
+class Student:
+    school="Gitam University"
+    def __init__(self, name, age):
+        self.name=name        #instance variable
+        self.age=age          #instance variable
+    
+    #instance method
+    def show_details(self):
+        return f'name:{self.name},age:{self.age}'
+    
+    #static method
+    @staticmethod
+    def add(a,b):
+        return a+b
+    
+    #class method
+    @classmethod
+    def get_school(cls):     #here get_school is a class method
+        return cls.school    #here cls.school is a class variable
+    
+#How to use them
+s1=Student("Harish",21)      #(instance)
+print(s1.show_details())                           #output:name:Harish,age:21
+#using static method
+print(Student.add(5,5))                            #output:10
+#using class method
+print(Student.get_school())                        #output:Gitam University
+
+7)Explain **Python’s OOP concepts**: inheritance, polymorphism, encapsulation, abstraction?
+
+-->Inheritance: One class(child) can inherit properties and methods from another class(Parent). This promotes code reuse.
+eg:class Animal:  # Parent class
+    def speak(self):
+        return "I make sounds"
+
+   class Dog(Animal):  # Child class inherits Animal
+      def speak(self):   # Overriding
+         return "Woof!"
+   class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+ dog = Dog()
+ cat= Cat()
+ print(dog.speak())        #woof!
+ print(cat.speak())        # Meow!
+-->Polymorphism: Same method name can behaves differently depending on the object. One name, many forms.
+eg: animals = [Dog(), Cat()]
+    for animal in animals:        #here Both Dog and Cat use the same method speak(), but output differs.
+       print(animal.speak())     # output: Dog → Woof!, Cat → Meow!
+-->Encapsulation: Binding the data and functions into a single entity. Restrict direct access to some attributes/methods to protect data
+eg: class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance   # private attribute
+    def deposit(self, amount):
+        self.__balance += amount
+    def get_balance(self):
+        return self.__balance
+acc = BankAccount(1000)
+acc.deposit(500)
+print(acc.get_balance())  # output: 1500
+# print(acc.__balance) ❌ AttributeError
+-->Abstraction: Hiding the implementation details and exposing only the essential features
+
+8)What are **magic/dunder methods** in Python? Give examples (__str__, __init__)?
+-->Dunder=Double Underscore eg->__int__, __str__.
+  These are special methods in python that start and end with __.
+  we dont need to call directly. Python calls them automatically when you do certain things.
+eg:with __init__, __str__
+  class Student:
+    def __init__(self, name, age):
+       self.name=name
+       self.age=age
+    def __str__(self):            #double underscore is called dunder which is starting and ending of the function name
+       return f'Name:{self.name}, Age:{self.age}'
+  s1=Student("Harish",21)
+  print(s1)                 
+
+9) Explain **Python’s Global Interpreter Lock (GIL)**. Why is it important?
+-->GIL ensures that only one thread runs pyhton bytecode at a time, even on multi-core processors.
+eg:Imagine you have a classroom(CPU) with many students(threads) but only one pen(GIL).
+   Even through multiple students want to write on the board at the same time, only one can use the pen at a time.
+-->Why does Python have the GIL:Simple memory management- Python uses references counting to manage objects in memory.
+  So, the GIL prevents multiple threads from changing reference counts at the same time(avoid crashes).
+   --Good for single threaded programs-Simple safer memory management.
+   --multi programs running at a same time even in the multi-processor we cant use them in parallel because of the GIL.
+
+10) Difference between **deepcopy vs copy.copy()** in Python?
+-->copy.copy is shallow copy in python- Both uses reference data objects but
+  -In the shallow copy when we modify the reference object data in the original object of data can also changed.
+  -In the deepcopy when we modify the reference object data in the original object of data cannot be changed.
+eg:#shallow copy
+import copy
+original=[[1,2],[3,4]]
+shallow_copy=copy.cop(original)
+shallow_copy[0][1]=99
+print(original)           #[[1,99],[3,4]]    here the original also changed in shallow_copy
+print(shallow_copy)       #[[1,99],[3,4]]
+
+eg:deepcopy
+import copy
+original=[[1,2],[3,4]]
+deep_copy=copy.deepcopy(original)
+deep_copy[0][1]=100
+print(original)          #[[1,2],[3,4]]     here the original is not changed when you changed the reference
+print(deep_copy)         #[[1,100],[3,4]]    
+
+
+
+
+                                    *******************Module ANS *******************************
+
+
+
+1)  Difference between **module and package** in Python?
+-->Module-module is a single python file(.py), which contains functions, classes, variables.
+eg: math.py is a module that provides math functions like sqrt, factorial, ceil, floor...
+   -import math- by using this we can use functions in the code
+-->Packages- package is a collection(folder) of related modules.
+   -It must contains __init__.py file(even if empty) to be treated as package.
+eg: numpy is a package with many modules inside
+   -import numpy as np - we can perform many task using this package numpy in coding
+
+
+2) What are **Python namespaces and scope** (LEGB rule)?
+-->Namespaces- namespaces are the placeholders like a box(dictionary) that maps names(identifiers) to objects
+eg: a=10 #here a is the namespace
+LEGB rule - explains python search order
+L- local namespaces - variables inside the function
+E-Enclosing namespaces - variables from outer of the function(for nested functions)
+G- Global namespace - variables which we can access every where it is in the top level of a module
+B- Built-in namespaces - functions and exceptions that python provides(print, len, ValueError...)
+-->Scope-Scope is where a variable can be accessed or modified within the code.
+LEGB rule(Name resolution order):
+L-Local- current function scope
+E-Enclosing- for outer function's scope(for nested functions)
+G-Global-module level scope
+B-Built-in - python built in names
+
+
+3)Explain **import vs from-import**.
+-->import- imports the whole module/package
+  -we must use module names as a prefix when accessing function/varables(like module.function name)
+eg: import math
+    print(math.sqrt(16))  # 4    here math is the module name must used in this.
+-->from _ import _ - import specific name from modules like(function, variables, classes) into your current namespace
+   - we can use them directly without module prefix
+eg:  form math import sqrt
+     print(sqrt(16))  # 4  here no need of use module - directly accessible
+
+
+4)What is **virtual environment (venv)** in Python? Why is it needed?
+-->Virtual environment is isolated workspace where you install and manage pytho packages 
+independently of the system-wide python installations.
+
+ -if we want to do different projects they need its own packges.
+  if we installing packages globally(pip install...) can mess up system 
+tools that relay on python. Virtual envirenment keeps everying safe.
+
+eg:One Projects needs its own packages setup. Another project needs its own.
+ If we do both in the same environment, things get messy- conflict can occur. 
+ So, virtual environment give each project its own environment. Thats why we needed virtual environment.
+
+
+5) Difference between **shallow copy, deep copy, assignment operator**.?
+-->Assignment operator- It doesnt copy the object , just creates  a new reference as to the same object and if we change in one it will reflect in another.
+eg: #Assignment operator
+list1=[1,2,[3,4]]
+list2=list1         #assignment (no copy)
+list2[0]=100
+print(list1)     #[100,2,[3,4]]
+-->Shallow copy - It creates a new object, but copies references of nested objects(not the objects themselves).
+  -top level changes are independent, but nested objects are shared and changed.
+eg:#shallow copy
+import copy
+list1=[1,2,[3,4]]
+list2=copy.copy(list1)   #shallow copy
+list2[0]=100
+list2[2][0]=200
+print(list1)           #[1,2,[200,4]]      nested list affected
+print(list2),          #[100,2,[200,4]]
+-->Deep copy- it creates new objects and recursively copies all nested objects.
+  -Changes in one object donot affect in another unlike shallowcopy.
+eg:#deep copy
+list1=[1,2,[3,4]]
+list2=copy.deepcopy(list1)      #deep copy
+list2[0]=100
+list2[2][0]=200
+print(list1)            #[1,2,[3,4]]         unaffected
+print(list2)            #[100,2,[200,4]]
+
+
+6)Explain how **JSON** is handled in Python (`json` module).?
+-->JSON(javascript object notation) is a lightweight data format for exchanging data between systems.
+  -Looks like a python dictionary, but it is always a string.
+eg:json
+{
+  "name":"Harish",
+  "age":21,
+  "skills":["Python","FastAPI"]
+}
+-->Python json module- Python provides the json module to encode(dump) and decode(load) JSON data.
+  -JSON handling 
+  1)converting Python to Json
+ import json
+python_dict={
+  "name": "Harish",
+  "age": 21,
+  "skills": ["Python", "FastAPI"]
+}
+print("Converting python to json")
+json_string=json.dumps(python_dict)    #Function: dumps or dump
+print(type(python_dict),json_string,type(json_string),)   #if it is a string it is a json data, if it is a dict it is a python data
+
+  2)converting JSON to python
+  print("Converting JSON to pyhton")
+json_strings='{"name": "Harish", "age": 23, "skills": ["Python", "FastAPI"]}'
+python_dict=json.loads(json_strings)
+print(type(json_strings),python_dict,type(python_dict))
+
+
+
+
+
+
+  
