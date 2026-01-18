@@ -1,8 +1,3 @@
-# s="manish"
-# print(s[::-1])
-
-
-
 #without using slicing printing first character of string
 s=input("Enter a string: ")
 n= len(s)
