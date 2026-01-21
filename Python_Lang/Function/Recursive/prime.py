@@ -6,3 +6,9 @@ def is_prime(n, i=2):
     if n % i == 0:
         return False
     return is_prime(n, i + 1)
+
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print("Prime number")
+else:
+    print("Not a prime number")
