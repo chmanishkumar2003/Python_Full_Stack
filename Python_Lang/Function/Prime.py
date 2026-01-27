@@ -1,3 +1,4 @@
+# Function for checking weather thenumber is prime or not.
 def prime(n):
     if n<=1:
         return False
